@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UA-USA Strategic Bridge 2026 | Partnership Agreement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #1e293b;
+        line-height: 1.6;
+        min-height: 100vh;
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        border-bottom: 2px solid #3b82f6;
+        animation: slideDown 0.6s ease-out;
+    }
+
+    @keyframes slideDown {
+        from {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        background: linear-gradient(135deg, #3b82f6, #06b6d4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .nav-dots {
+        display: flex;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #64748b;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .dot.active {
+        background: #3b82f6;
+        transform: scale(1.3);
+    }
+
+    .dot:hover {
+        background: #0ea5e9;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    /* PAGE 1 - AGREEMENT */
+    .page {
+        display: none;
+        animation: fadeIn 0.8s ease-out;
+    }
+
+    .page.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .page-1 {
+        background: white;
+        border-radius: 16px;
+        padding: 60px 50px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        max-height: 85vh;
+        overflow-y: auto;
+        padding-right: 30px;
+    }
+
+    .page-1::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .page-1::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 10px;
+    }
+
+    .page-1::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 10px;
+    }
+
+    .page-1::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 50px;
+        animation: slideUp 0.8s ease-out;
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .title h1 {
+        font-size: 32px;
+        color: #0f172a;
+        margin-bottom: 10px;
+    }
+
+    .title .subtitle {
+        color: #3b82f6;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .divider {
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        margin: 30px 0;
+    }
+
+    .section {
+        margin-bottom: 40px;
+        animation: fadeIn 1s ease-out;
+    }
+
+    .section-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0f172a;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .section-title::before {
+        content: '';
+        width: 4px;
+        height: 24px;
+        background: #3b82f6;
+        border-radius: 2px;
+    }
+
+    .section-content {
+        color: #475569;
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .section-content p {
+        margin-bottom: 12px;
+    }
+
+    .highlight {
+        background: linear-gradient(120deg, #dbeafe, #e0f2fe);
+        padding: 20px;
+        border-left: 4px solid #3b82f6;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
+
+    /* PAGE 2 - SIGNATURE */
+    .page-2 {
+        background: white;
+        border-radius: 16px;
+        padding: 60px 50px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .signature-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 60px;
+    }
+
+    .signer-card {
+        text-align: center;
+        padding: 25px;
+        background: #f8fafc;
+        border-radius: 12px;
+        border: 2px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+
+    .signer-card:hover {
+        border-color: #3b82f6;
+        background: #f0f9ff;
+    }
+
+    .signer-card h3 {
+        font-size: 18px;
+        color: #0f172a;
+        margin-bottom: 8px;
+    }
+
+    .signer-role {
+        font-size: 13px;
+        color: #64748b;
+        margin-bottom: 20px;
+    }
+
+    .sign-btn {
+        background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 13px;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        width: 100%;
+    }
+
+    .sign-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+    }
+
+    .sign-btn.signed {
+        background: #22c55e;
+        cursor: default;
+    }
+
+    .sign-btn.signed:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .signature-status-badge {
+        display: inline-block;
+        margin-top: 12px;
+        padding: 6px 12px;
+        background: #dcfce7;
+        color: #166534;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        display: none;
+    }
+
+    .signature-status-badge.show {
+        display: inline-block;
+    }
+
+    .agreement-terms {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 40px 0;
+        border-left: 4px solid #3b82f6;
+    }
+
+    .agreement-terms h4 {
+        color: #0f172a;
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .agreement-terms p {
+        font-size: 13px;
+        color: #475569;
+        line-height: 1.6;
+    }
+
+    .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        accent-color: #3b82f6;
+    }
+
+    .checkbox-label {
+        font-size: 13px;
+        color: #475569;
+        cursor: pointer;
+    }
+
+    /* MODAL SIGNATURE */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        animation: fadeIn 0.3s ease-out;
+    }
+
+    .modal.show {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-content {
+        background: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+        max-width: 600px;
+        width: 90%;
+        animation: slideUp 0.4s ease-out;
+    }
+
+    .modal-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .modal-header h2 {
+        color: #0f172a;
+        margin-bottom: 5px;
+        font-size: 24px;
+    }
+
+    .modal-header p {
+        color: #64748b;
+        font-size: 13px;
+    }
+
+    .modal-canvas-wrapper {
+        border: 3px dashed #3b82f6;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        padding: 20px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .modal-canvas-wrapper canvas {
+        width: 100%;
+        height: 250px;
+        background: white;
+        border-radius: 8px;
+        cursor: crosshair;
+        display: block;
+    }
+
+    .modal-hint {
+        text-align: center;
+        font-size: 12px;
+        color: #94a3b8;
+        margin-bottom: 15px;
+    }
+
+    .modal-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .modal-btn {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 13px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .modal-btn-confirm {
+        background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+        color: white;
+    }
+
+    .modal-btn-confirm:hover:not(:disabled) {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+    }
+
+    .modal-btn-clear {
+        background: #f1f5f9;
+        color: #0f172a;
+        border: 2px solid #cbd5e1;
+    }
+
+    .modal-btn-clear:hover {
+        background: #e2e8f0;
+    }
+
+    .modal-btn:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+
+    /* BUTTONS */
+    .button-group {
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 14px 35px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+        color: white;
+    }
+
+    .btn-primary:hover:not(:disabled) {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+    }
+
+    .btn-primary:active {
+        transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+        background: #f1f5f9;
+        color: #0f172a;
+        border: 2px solid #cbd5e1;
+    }
+
+    .btn-secondary:hover {
+        background: #e2e8f0;
+    }
+
+    .btn-disabled {
+        background: #cbd5e1;
+        cursor: not-allowed;
+        opacity: 0.6;
+    }
+
+    .success-message {
+        display: none;
+        background: #dcfce7;
+        border: 2px solid #22c55e;
+        color: #166534;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 30px;
+        text-align: center;
+        animation: slideUp 0.5s ease-out;
+    }
+
+    .success-message.show {
+        display: block;
+    }
+
+    .contact-section {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 2px solid #e2e8f0;
+    }
+
+    .contact-section p {
+        color: #64748b;
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .contact-link {
+        color: #3b82f6;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .contact-link:hover {
+        color: #0ea5e9;
+        text-decoration: underline;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        .page-1, .page-2 {
+            padding: 40px 25px;
+        }
+
+        .signature-info {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .title h1 {
+            font-size: 24px;
+        }
+
+        .button-group {
+            flex-direction: column;
+        }
+
+        .btn {
+            width: 100%;
+        }
+
+        .header-content {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .modal-content {
+            padding: 30px 20px;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">🤝 UA-USA Bridge</div>
+            <div class="nav-dots">
+                <div class="dot active" onclick="goToPage(0)"></div>
+                <div class="dot" onclick="goToPage(1)"></div>
+            </div>
+        </div>
+    </header>
+
+```
+<div class="container">
+    <!-- PAGE 1: AGREEMENT -->
+    <div class="page page-1 active">
+        <div class="title">
+            <div class="subtitle">Partnership Agreement</div>
+            <h1>UA-USA Strategic Bridge 2026</h1>
+            <p style="color: #64748b; font-size: 14px; margin-top: 10px;">Operational Framework & Strategic Partnership Proposal</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="section">
+            <div class="section-title">Executive Summary</div>
+            <div class="section-content">
+                <p>Дана пропозиція описує створення транскордонної бізнес-моделі, що базується на ринковому арбітражі (Market Arbitrage) між Україною та США. Синергія проекту полягає у поєднанні інтелектуального ресурсу та низьких операційних витрат України (Low Opex/High IQ) з високою ліквідністю та купівельною спроможністю ринку США.</p>
+                <p><strong>Мета 2026 року:</strong> побудова стійкої інфраструктури для генерації валютного прибутку та масштабування цифрових та фізичних активів.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Organizational Structure (Governance)</div>
+            <div class="section-content">
+                <p><strong>Managing Partner / CEO (UA) — Артём (Artemkaplagg)</strong></p>
+                <div class="highlight">
+                    <p>• Стратегічне планування та R&D</p>
+                    <p>• Технічна інфраструктура (AI-автоматизація, веб-платформи)</p>
+                    <p>• Operational Control: управління процесами в Україні</p>
+                    <p>• Маркетингова стратегія та аналіз ніш</p>
+                </div>
+
+                <p><strong>Managing Partner / CEO (USA) — Тимур</strong></p>
+                <div class="highlight">
+                    <p>• Market Relations: представництво інтересів на ринку США</p>
+                    <p>• Supply Chain Management: фізичний контроль товарів та логістичних вузлів у США</p>
+                    <p>• Financial Gateway: управління фінансовими потоками всередину штатів</p>
+                    <p>• Quality Assurance: контроль якості продуктів/послуг перед відправкою/реалізацією</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Financial & Legal Framework</div>
+            <div class="section-content">
+                <p><strong>Equity Split:</strong> Розподіл чистого прибутку (Net Profit) здійснюється у пропорції <strong>50/50</strong> після вирахування всіх операційних витрат (податки, логістика, маркетинг).</p>
+                <p><strong>Reporting:</strong> Впроваджується щомісячний фінансовий аудит (P&L statement). Всі транзакції фіксуються в єдиній хмарній системі обліку для повної прозорості.</p>
+                <p><strong>Commitment:</strong> Обов'язкова синхронізація (Daily Stand-up) раз на 48 годин. Невиконання встановлених KPI є приводом для перегляду умов партнерства.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Strategic Business Units (SBU)</div>
+            <div class="section-content">
+                <p><strong>Unit 1: Premium Resell & Arbitrage</strong><br>
+                Логістичний міст: викуп високоліквідних активів на закритих аукціонах та стокових майданчиках США. Дистрибуція в преміум-сегменті ринку України з маржинальністю від 30% до 100%.</p>
+
+                <p><strong>Unit 2: Global AI Service Provider</strong><br>
+                Аутсорс-агентство нового покоління. Розробка та впровадження AI-рішень (чат-боти, автоматизація, контент) для малого та середнього бізнесу в США. Виконання робіт українським офісом забезпечує високу рентабельність.</p>
+
+                <p><strong>Unit 3: Global E-commerce Expansion</strong><br>
+                Запуск та управління торговими точками на платформах Shopify/Amazon. Використання локальної присутності в США для швидкого повернення товарів та роботи з клієнтами.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Roadmap Q1-Q2 2026</div>
+            <div class="section-content">
+                <p><strong>Лютий:</strong> Market Intelligence. Аналіз 10+ ніш, setup платіжних систем та технічної інфраструктури.</p>
+                <p><strong>Березень:</strong> MVP Launch. Запуск першого пілотного проекту. Отримання першого прибутку (First Revenue).</p>
+                <p><strong>Квітень:</strong> ROI Analysis. Оцінка ефективності, аудит помилок та початок масштабування (Scalability Phase).</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Conclusion</div>
+            <div class="section-content">
+                <p>Даний документ є фундаментом для довгострокової капіталізації. Ми не шукаємо "швидких грошей", ми будуємо систему, що працює на різниці економічних циклів двох країн. <strong>Дисципліна — це єдиний шлях до масштабування.</strong></p>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-secondary" onclick="goToPage(1)">Перейти до підпису →</button>
+        </div>
+    </div>
+
+    <!-- PAGE 2: SIGNATURE -->
+    <div class="page page-2">
+        <div class="title">
+            <div class="subtitle">Signature & Acceptance</div>
+            <h1>Partnership Agreement</h1>
+            <p style="color: #64748b; font-size: 14px; margin-top: 10px;">Обидві сторони згодні з умовами партнерства та приймають цей договір</p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="agreement-terms">
+            <h4>📋 Умови Прийняття</h4>
+            <p>Обидва партнери підтверджують, що прочитали весь договір, розуміють його умови та добровільно погоджуються з усіма пунктами, викладеними вище. Цей договір набуває чинності з дати останньої підписи.</p>
+        </div>
+
+        <div class="signature-info">
+            <div class="signer-card">
+                <h3>Артём</h3>
+                <p class="signer-role">CEO Ukraine | Market Strategy & Operations</p>
+                <button class="sign-btn" id="signBtn1" onclick="openSignatureModal(0)">
+                    ✏️ Підписати
+                </button>
+                <div class="signature-status-badge" id="badge1">✅ Підписано</div>
+            </div>
+
+            <div class="signer-card">
+                <h3>Тимур</h3>
+                <p class="signer-role">CEO USA | Market Relations & Supply Chain</p>
+                <button class="sign-btn" id="signBtn2" onclick="openSignatureModal(1)">
+                    ✏️ Підписати
+                </button>
+                <div class="signature-status-badge" id="badge2">✅ Підписано</div>
+            </div>
+        </div>
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="agree" class="checkbox">
+            <label for="agree" class="checkbox-label">✓ Я прочитав весь документ і погоджуюся з усіма умовами партнерства</label>
+        </div>
+
+        <div class="contact-section">
+            <p>📞 Питання щодо договору?</p>
+            <a href="https://t.me/artemkaplagg" target="_blank" class="contact-link">Зв'яжіться в Telegram → @artemkaplagg</a>
+        </div>
+
+        <div class="success-message" id="successMsg">
+            <strong>✅ Договір підписаний успішно!</strong><br>
+            <p style="margin-top: 8px;">Усі детали було записано. До скорої зустрічи! 🚀</p>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-secondary" onclick="goToPage(0)">← Повернутися до договору</button>
+            <button class="btn btn-primary btn-disabled" id="submitBtn" onclick="submitAgreement()" disabled>
+                ПРИЙНЯТИ ДОГОВІР ✓
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL FOR SIGNATURE -->
+<div class="modal" id="signatureModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">Підпиши Договір</h2>
+            <p>Натисніть та малюйте вашу підпис</p>
+        </div>
+
+        <div class="modal-hint">
+            💡 Рисуйте своєю мишею або пальцем на екрані нижче
+        </div>
+
+        <div class="modal-canvas-wrapper">
+            <canvas id="modalCanvas"></canvas>
+        </div>
+
+        <div class="modal-buttons">
+            <button class="modal-btn modal-btn-clear" onclick="clearModalSignature()">
+                🗑️ Очистити
+            </button>
+            <button class="modal-btn modal-btn-confirm" onclick="confirmSignature()" id="confirmBtn" disabled>
+                ✓ Підтвердити
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('signatureModal');
+    const modalCanvas = document.getElementById('modalCanvas');
+    const ctx = modalCanvas.getContext('2d');
+    const modalTitle = document.getElementById('modalTitle');
+    const confirmBtn = document.getElementById('confirmBtn');
+    
+    let currentSigner = -1;
+    let isDrawing = false;
+    let hasDrawn = false;
+    const signed = [false, false];
+    const signedNames = ['Артём', 'Тимур'];
+
+    function setupCanvasSize() {
+        const rect = modalCanvas.parentElement.getBoundingClientRect();
+        modalCanvas.width = rect.width - 40;
+        modalCanvas.height = 250;
+        ctx.strokeStyle = '#0f172a';
+        ctx.lineWidth = 2.5;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+    }
+
+    setupCanvasSize();
+    window.addEventListener('resize', setupCanvasSize);
+
+    function openSignatureModal(index) {
+        currentSigner = index;
+        hasDrawn = false;
+        confirmBtn.disabled = true;
+        clearModalSignature();
+        
+        modalTitle.textContent = `Підпиши Договір — ${signedNames[index]}`;
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        currentSigner = -1;
+    }
+
+    // Canvas drawing
+    modalCanvas.addEventListener('mousedown', startDrawing);
+    modalCanvas.addEventListener('mousemove', draw);
+    modalCanvas.addEventListener('mouseup', stopDrawing);
+    modalCanvas.addEventListener('mouseout', stopDrawing);
+
+    // Touch support
+    modalCanvas.addEventListener('touchstart', startDrawing);
+    modalCanvas.addEventListener('touchmove', draw);
+    modalCanvas.addEventListener('touchend', stopDrawing);
+
+    function startDrawing(e) {
+        isDrawing = true;
+        hasDrawn = true;
+        confirmBtn.disabled = false;
+        
+        const rect = modalCanvas.getBoundingClientRect();
+        const x = (e.clientX || e.touches?.[0]?.clientX) - rect.left;
+        const y = (e.clientY || e.touches?.[0]?.clientY) - rect.top;
+        
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+    }
+
+    function draw(e) {
+        if (!isDrawing) return;
+        
+        const rect = modalCanvas.getBoundingClientRect();
+        const x = (e.clientX || e.touches?.[0]?.clientX) - rect.left;
+        const y = (e.clientY || e.touches?.[0]?.clientY) - rect.top;
+        
+        ctx.lineTo(x, y);
+        ctx.stroke();
+    }
+
+    function stopDrawing() {
+        isDrawing = false;
+    }
+
+    function clearModalSignature() {
+        ctx.clearRect(0, 0, modalCanvas.width, modalCanvas.height);
+        hasDrawn = false;
+        confirmBtn.disabled = true;
+    }
+
+    function confirmSignature() {
+        if (!hasDrawn || currentSigner < 0) return;
+
+        signed[currentSigner] = true;
+        
+        // Обновляем UI
+        const btn = document.getElementById(`signBtn${currentSigner + 1}`);
+        const badge = document.getElementById(`badge${currentSigner + 1}`);
+        
+        btn.classList.add('signed');
+        btn.textContent = '✅ Підписано';
+        btn.disabled = true;
+        
+        badge.classList.add('show');
+
+        closeModal();
+        checkCompletion();
+    }
+
+    document.getElementById('agree').addEventListener('change', checkCompletion);
+
+    function checkCompletion() {
+        const agree = document.getElementById('agree').checked;
+        const bothSigned = signed[0] && signed[1];
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (bothSigned && agree) {
+            submitBtn.classList.remove('btn-disabled');
+            submitBtn.disabled = false;
+        } else {
+            submitBtn.classList.add('btn-disabled');
+            submitBtn.disabled = true;
+        }
+    }
+
+    function submitAgreement() {
+        if (!signed[0] || !signed[1] || !document.getElementById('agree').checked) {
+            alert('Будь ласка, заповніть усі поля!');
+            return;
+        }
+
+        const successMsg = document.getElementById('successMsg');
+        successMsg.classList.add('show');
+
+        setTimeout(() => {
+            const today = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            const dateStr = today.toLocaleDateString('uk-UA', options);
+            alert('🎉 Договір прийнято успішно!\n\nКонтакт: @artemkaplagg\nДата: ' + dateStr);
+        }, 500);
+    }
+
+    function goToPage(pageNum) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+
+        document.querySelectorAll('.page')[pageNum].classList.add('active');
+        document.querySelectorAll('.dot')[pageNum].classList.add('active');
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Закрытие модала по клику на фон
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+</script>
+```
+
+</body>
+</html>

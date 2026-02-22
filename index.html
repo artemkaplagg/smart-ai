@@ -1,930 +1,957 @@
 <!DOCTYPE html>
 
-<html lang="uk">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UA-USA Strategic Bridge 2026 | Partnership Agreement</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-```
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        color: #1e293b;
-        line-height: 1.6;
-        min-height: 100vh;
-    }
-
-    /* HEADER & NAVIGATION */
-    header {
-        background: rgba(15, 23, 42, 0.95);
-        backdrop-filter: blur(10px);
-        padding: 20px 0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        border-bottom: 2px solid #3b82f6;
-        animation: slideDown 0.6s ease-out;
-    }
-
-    @keyframes slideDown {
-        from {
-            transform: translateY(-100%);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    .header-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .logo {
-        font-size: 24px;
-        font-weight: bold;
-        background: linear-gradient(135deg, #3b82f6, #06b6d4);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    .nav-dots {
-        display: flex;
-        gap: 8px;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: #64748b;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-
-    .dot.active {
-        background: #3b82f6;
-        transform: scale(1.3);
-    }
-
-    .dot:hover {
-        background: #0ea5e9;
-    }
-
-    /* MAIN CONTAINER */
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 40px 20px;
-    }
-
-    /* PAGE 1 - AGREEMENT */
-    .page {
-        display: none;
-        animation: fadeIn 0.8s ease-out;
-    }
-
-    .page.active {
-        display: block;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .page-1 {
-        background: white;
-        border-radius: 16px;
-        padding: 60px 50px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        max-height: 85vh;
-        overflow-y: auto;
-        padding-right: 30px;
-    }
-
-    .page-1::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    .page-1::-webkit-scrollbar-track {
-        background: #f1f5f9;
-        border-radius: 10px;
-    }
-
-    .page-1::-webkit-scrollbar-thumb {
-        background: #cbd5e1;
-        border-radius: 10px;
-    }
-
-    .page-1::-webkit-scrollbar-thumb:hover {
-        background: #94a3b8;
-    }
-
-    .title {
-        text-align: center;
-        margin-bottom: 50px;
-        animation: slideUp 0.8s ease-out;
-    }
-
-    @keyframes slideUp {
-        from {
-            transform: translateY(30px);
-            opacity: 0;
-        }
-        to {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    }
-
-    .title h1 {
-        font-size: 32px;
-        color: #0f172a;
-        margin-bottom: 10px;
-    }
-
-    .title .subtitle {
-        color: #3b82f6;
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-
-    .divider {
-        height: 3px;
-        background: linear-gradient(90deg, transparent, #3b82f6, transparent);
-        margin: 30px 0;
-    }
-
-    .section {
-        margin-bottom: 40px;
-        animation: fadeIn 1s ease-out;
-    }
-
-    .section-title {
-        font-size: 18px;
-        font-weight: 700;
-        color: #0f172a;
-        margin-bottom: 15px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .section-title::before {
-        content: '';
-        width: 4px;
-        height: 24px;
-        background: #3b82f6;
-        border-radius: 2px;
-    }
-
-    .section-content {
-        color: #475569;
-        font-size: 14px;
-        line-height: 1.8;
-    }
-
-    .section-content p {
-        margin-bottom: 12px;
-    }
-
-    .highlight {
-        background: linear-gradient(120deg, #dbeafe, #e0f2fe);
-        padding: 20px;
-        border-left: 4px solid #3b82f6;
-        border-radius: 8px;
-        margin: 20px 0;
-    }
-
-    /* PAGE 2 - SIGNATURE */
-    .page-2 {
-        background: white;
-        border-radius: 16px;
-        padding: 60px 50px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .signature-info {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 60px;
-        margin-bottom: 60px;
-    }
-
-    .signer-card {
-        text-align: center;
-        padding: 25px;
-        background: #f8fafc;
-        border-radius: 12px;
-        border: 2px solid #e2e8f0;
-        transition: all 0.3s ease;
-    }
-
-    .signer-card:hover {
-        border-color: #3b82f6;
-        background: #f0f9ff;
-    }
-
-    .signer-card h3 {
-        font-size: 18px;
-        color: #0f172a;
-        margin-bottom: 8px;
-    }
-
-    .signer-role {
-        font-size: 13px;
-        color: #64748b;
-        margin-bottom: 20px;
-    }
-
-    .sign-btn {
-        background: linear-gradient(135deg, #3b82f6, #0ea5e9);
-        color: white;
-        border: none;
-        padding: 12px 24px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 13px;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        width: 100%;
-    }
-
-    .sign-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-    }
-
-    .sign-btn.signed {
-        background: #22c55e;
-        cursor: default;
-    }
-
-    .sign-btn.signed:hover {
-        transform: none;
-        box-shadow: none;
-    }
-
-    .signature-status-badge {
-        display: inline-block;
-        margin-top: 12px;
-        padding: 6px 12px;
-        background: #dcfce7;
-        color: #166534;
-        border-radius: 6px;
-        font-size: 12px;
-        font-weight: 600;
-        display: none;
-    }
-
-    .signature-status-badge.show {
-        display: inline-block;
-    }
-
-    .agreement-terms {
-        background: #f8fafc;
-        padding: 20px;
-        border-radius: 8px;
-        margin: 40px 0;
-        border-left: 4px solid #3b82f6;
-    }
-
-    .agreement-terms h4 {
-        color: #0f172a;
-        margin-bottom: 12px;
-        font-size: 14px;
-    }
-
-    .agreement-terms p {
-        font-size: 13px;
-        color: #475569;
-        line-height: 1.6;
-    }
-
-    .checkbox-group {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin: 20px 0;
-    }
-
-    .checkbox {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-        accent-color: #3b82f6;
-    }
-
-    .checkbox-label {
-        font-size: 13px;
-        color: #475569;
-        cursor: pointer;
-    }
-
-    /* MODAL SIGNATURE */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        animation: fadeIn 0.3s ease-out;
-    }
-
-    .modal.show {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .modal-content {
-        background: white;
-        padding: 40px;
-        border-radius: 16px;
-        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-        max-width: 600px;
-        width: 90%;
-        animation: slideUp 0.4s ease-out;
-    }
-
-    .modal-header {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .modal-header h2 {
-        color: #0f172a;
-        margin-bottom: 5px;
-        font-size: 24px;
-    }
-
-    .modal-header p {
-        color: #64748b;
-        font-size: 13px;
-    }
-
-    .modal-canvas-wrapper {
-        border: 3px dashed #3b82f6;
-        border-radius: 12px;
-        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-        padding: 20px;
-        margin-bottom: 20px;
-        position: relative;
-    }
-
-    .modal-canvas-wrapper canvas {
-        width: 100%;
-        height: 250px;
-        background: white;
-        border-radius: 8px;
-        cursor: crosshair;
-        display: block;
-    }
-
-    .modal-hint {
-        text-align: center;
-        font-size: 12px;
-        color: #94a3b8;
-        margin-bottom: 15px;
-    }
-
-    .modal-buttons {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-    }
-
-    .modal-btn {
-        padding: 12px 20px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 13px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .modal-btn-confirm {
-        background: linear-gradient(135deg, #3b82f6, #0ea5e9);
-        color: white;
-    }
-
-    .modal-btn-confirm:hover:not(:disabled) {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
-    }
-
-    .modal-btn-clear {
-        background: #f1f5f9;
-        color: #0f172a;
-        border: 2px solid #cbd5e1;
-    }
-
-    .modal-btn-clear:hover {
-        background: #e2e8f0;
-    }
-
-    .modal-btn:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    }
-
-    /* BUTTONS */
-    .button-group {
-        display: flex;
-        gap: 15px;
-        margin-top: 40px;
-        justify-content: center;
-    }
-
-    .btn {
-        padding: 14px 35px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .btn-primary {
-        background: linear-gradient(135deg, #3b82f6, #0ea5e9);
-        color: white;
-    }
-
-    .btn-primary:hover:not(:disabled) {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
-    }
-
-    .btn-primary:active {
-        transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-        background: #f1f5f9;
-        color: #0f172a;
-        border: 2px solid #cbd5e1;
-    }
-
-    .btn-secondary:hover {
-        background: #e2e8f0;
-    }
-
-    .btn-disabled {
-        background: #cbd5e1;
-        cursor: not-allowed;
-        opacity: 0.6;
-    }
-
-    .success-message {
-        display: none;
-        background: #dcfce7;
-        border: 2px solid #22c55e;
-        color: #166534;
-        padding: 20px;
-        border-radius: 8px;
-        margin-top: 30px;
-        text-align: center;
-        animation: slideUp 0.5s ease-out;
-    }
-
-    .success-message.show {
-        display: block;
-    }
-
-    .contact-section {
-        text-align: center;
-        margin-top: 40px;
-        padding-top: 30px;
-        border-top: 2px solid #e2e8f0;
-    }
-
-    .contact-section p {
-        color: #64748b;
-        font-size: 13px;
-        margin-bottom: 10px;
-    }
-
-    .contact-link {
-        color: #3b82f6;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-    }
-
-    .contact-link:hover {
-        color: #0ea5e9;
-        text-decoration: underline;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-        .page-1, .page-2 {
-            padding: 40px 25px;
-        }
-
-        .signature-info {
-            grid-template-columns: 1fr;
-            gap: 40px;
-        }
-
-        .title h1 {
-            font-size: 24px;
-        }
-
-        .button-group {
-            flex-direction: column;
-        }
-
-        .btn {
-            width: 100%;
-        }
-
-        .header-content {
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .modal-content {
-            padding: 30px 20px;
-        }
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>s0ftология</title>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #CC0000;
+    --red-bright: #ff1a1a;
+    --white: #ffffff;
+    --dark: #080808;
+    --card: #111111;
+    --border: #2a0000;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+
+body {
+background: var(–dark);
+color: var(–white);
+font-family: ‘Share Tech Mono’, monospace;
+overflow-x: hidden;
+cursor: crosshair;
+}
+
+#particles {
+position: fixed; top:0; left:0;
+width:100%; height:100%;
+z-index:0; pointer-events:none;
+}
+.grid-bg {
+position: fixed; top:0; left:0;
+width:100%; height:100%; z-index:0;
+background-image:
+linear-gradient(rgba(204,0,0,0.035) 1px, transparent 1px),
+linear-gradient(90deg, rgba(204,0,0,0.035) 1px, transparent 1px);
+background-size: 50px 50px;
+animation: gridPulse 5s ease-in-out infinite;
+}
+@keyframes gridPulse { 0%,100%{opacity:.4} 50%{opacity:1} }
+
+body::after {
+content:’’; position:fixed; inset:0;
+background-image: url(“data:image/svg+xml,%3Csvg viewBox=‘0 0 256 256’ xmlns=‘http://www.w3.org/2000/svg’%3E%3Cfilter id=‘n’%3E%3CfeTurbulence type=‘fractalNoise’ baseFrequency=‘0.9’ numOctaves=‘4’ stitchTiles=‘stitch’/%3E%3C/filter%3E%3Crect width=‘100%25’ height=‘100%25’ filter=‘url(%23n)’/%3E%3C/svg%3E”);
+opacity:.025; pointer-events:none; z-index:9999;
+}
+
+/* ── SECRET PAGE OVERLAY ── */
+#secret-overlay {
+display:none; position:fixed; inset:0;
+background: #000; z-index:10000;
+flex-direction:column; align-items:center; justify-content:center;
+text-align:center; padding:40px;
+}
+#secret-overlay.active { display:flex; }
+.secret-close {
+position:absolute; top:20px; right:30px;
+color:rgba(255,255,255,.3); font-size:28px;
+cursor:pointer; transition:.2s;
+}
+.secret-close:hover { color:var(–red); }
+.secret-title {
+font-family:‘Black Ops One’,cursive;
+font-size:clamp(32px,6vw,72px);
+color:var(–red);
+animation: glitch 2s infinite;
+margin-bottom:20px;
+text-shadow: 0 0 40px rgba(204,0,0,.8);
+}
+.secret-text {
+color:rgba(255,255,255,.5);
+font-size:14px; letter-spacing:3px;
+margin-bottom:40px; line-height:2;
+}
+.secret-code-display {
+font-family:‘Share Tech Mono’,monospace;
+font-size:11px; color:rgba(204,0,0,.6);
+line-height:1.8; text-align:left;
+max-width:500px; margin-bottom:40px;
+}
+
+/* ── NAV ── */
+nav {
+position:fixed; top:0; left:0; right:0; z-index:100;
+display:flex; justify-content:space-between; align-items:center;
+padding:18px 60px;
+background:linear-gradient(to bottom,rgba(0,0,0,.95),transparent);
+border-bottom:1px solid rgba(204,0,0,.2);
+}
+.nav-logo {
+font-family:‘Black Ops One’,cursive; font-size:22px;
+color:var(–red); letter-spacing:3px;
+text-shadow:0 0 20px rgba(204,0,0,.8);
+cursor:pointer; user-select:none;
+}
+.nav-logo .zero { color:white; transition:.3s; }
+.nav-logo:hover .zero { color:var(–red); text-shadow:0 0 15px var(–red); }
+.nav-links { display:flex; gap:30px; list-style:none; }
+.nav-links a {
+color:rgba(255,255,255,.6); text-decoration:none;
+font-size:12px; letter-spacing:2px; text-transform:uppercase;
+transition:color .3s;
+}
+.nav-links a:hover { color:var(–red); }
+.nav-secret-hint {
+font-size:10px; color:rgba(255,255,255,.1);
+letter-spacing:1px;
+}
+
+/* ── HERO ── */
+.hero {
+position:relative; z-index:1;
+min-height:100vh;
+display:flex; flex-direction:column;
+align-items:center; justify-content:center;
+text-align:center; padding:120px 40px 60px;
+}
+.hero-logo {
+width:220px; height:220px; border-radius:50%;
+border:2px solid rgba(204,0,0,.4);
+box-shadow:0 0 60px rgba(204,0,0,.3),0 0 120px rgba(204,0,0,.1);
+margin-bottom:40px;
+animation:logoFloat 3s ease-in-out infinite;
+object-fit:cover;
+cursor:pointer;
+transition: transform .1s;
+}
+@keyframes logoFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
+.hero-logo.rage {
+animation: logoRage 0.1s infinite !important;
+}
+@keyframes logoRage {
+0%  { transform: translate(-3px,-2px) rotate(-1deg); filter:hue-rotate(0deg) brightness(1.5); }
+25% { transform: translate(3px,2px) rotate(1deg); filter:hue-rotate(10deg) brightness(2); }
+50% { transform: translate(-2px,3px) rotate(-2deg); filter:hue-rotate(0deg) brightness(1.5); }
+75% { transform: translate(2px,-3px) rotate(2deg); filter:hue-rotate(-10deg) brightness(2); }
+100%{ transform: translate(-3px,1px) rotate(0deg); filter:hue-rotate(0deg) brightness(1.5); }
+}
+.blood-splat {
+position:absolute; pointer-events:none;
+animation: splatFade 1s ease-out forwards;
+z-index:50;
+}
+@keyframes splatFade { 0%{opacity:1;transform:scale(0)} 50%{opacity:1;transform:scale(1)} 100%{opacity:0;transform:scale(1.2)} }
+.bear-reaction {
+position:absolute; top:60px;
+font-family:‘Share Tech Mono’,monospace;
+font-size:12px; color:var(–red);
+letter-spacing:2px;
+animation: reactionPop .5s ease-out forwards;
+pointer-events:none; z-index:60;
+}
+@keyframes reactionPop { 0%{opacity:0;transform:translateY(10px)} 30%{opacity:1;transform:translateY(-5px)} 80%{opacity:1} 100%{opacity:0;transform:translateY(-20px)} }
+
+.hero-title {
+font-family:‘Black Ops One’,cursive;
+font-size:clamp(52px,10vw,96px);
+color:var(–white); letter-spacing:6px;
+margin-bottom:20px; position:relative;
+animation:glitch 3s infinite;
+}
+.hero-title span { color:var(–red); }
+@keyframes glitch {
+0%,90%,100% { text-shadow:none; transform:none; }
+92% { text-shadow:-3px 0 var(–red),3px 0 #00ffff; transform:translate(-2px,0); }
+94% { text-shadow:3px 0 var(–red),-3px 0 #00ffff; transform:translate(2px,0); }
+96% { text-shadow:-3px 0 #00ffff,3px 0 var(–red); transform:translate(0,1px); }
+}
+.hero-subtitle {
+font-size:14px; color:rgba(255,255,255,.5);
+letter-spacing:4px; text-transform:uppercase; margin-bottom:16px;
+}
+.typewriter {
+font-size:18px; color:var(–red);
+letter-spacing:2px; min-height:28px; margin-bottom:50px;
+}
+.typewriter::after { content:’|’; animation:blink .8s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+.hero-btns { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; margin-bottom:20px; }
+
+/* ── BUTTONS ── */
+.btn-primary {
+background:var(–red); color:white; border:none;
+padding:14px 36px; font-family:‘Black Ops One’,cursive;
+font-size:14px; letter-spacing:3px; cursor:pointer;
+clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+transition:all .3s; text-decoration:none; display:inline-block;
+}
+.btn-primary:hover {
+background:var(–red-bright);
+box-shadow:0 0 30px rgba(255,26,26,.6); transform:translateY(-2px);
+}
+.btn-secondary {
+background:transparent; color:var(–white);
+border:1px solid rgba(255,255,255,.3);
+padding:14px 36px; font-family:‘Black Ops One’,cursive;
+font-size:14px; letter-spacing:3px; cursor:pointer;
+clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+transition:all .3s; text-decoration:none; display:inline-block;
+}
+.btn-secondary:hover { border-color:var(–red); color:var(–red); }
+
+/* ── DIVIDER ── */
+.divider {
+position:relative; z-index:1;
+text-align:center; padding:10px 0;
+}
+.divider::before {
+content:’’; display:block; width:80%; height:1px;
+background:linear-gradient(to right,transparent,rgba(204,0,0,.5),transparent);
+margin:0 auto;
+}
+
+/* ── SECTION SHARED ── */
+.section-line {
+width:60px; height:3px; background:var(–red);
+margin:16px 0 24px; box-shadow:0 0 10px var(–red);
+}
+.fade-in { opacity:0; transform:translateY(30px); transition:opacity .6s,transform .6s; }
+.fade-in.visible { opacity:1; transform:translateY(0); }
+
+/* ── SEARCH SECTION ── */
+.search-section {
+position:relative; z-index:1;
+padding:80px 60px; max-width:800px; margin:0 auto; text-align:center;
+}
+.search-section h2 {
+font-family:‘Black Ops One’,cursive; font-size:36px; margin-bottom:8px;
+}
+.search-section h2 span { color:var(–red); }
+.search-wrap {
+position:relative; margin-top:40px;
+}
+.search-input {
+width:100%; background:var(–card);
+border:1px solid rgba(204,0,0,.4);
+color:white; padding:16px 60px 16px 20px;
+font-family:‘Share Tech Mono’,monospace; font-size:14px;
+letter-spacing:2px; outline:none;
+clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);
+transition:border .3s;
+}
+.search-input:focus { border-color:var(–red); box-shadow:0 0 20px rgba(204,0,0,.2); }
+.search-input::placeholder { color:rgba(255,255,255,.2); }
+.search-btn {
+position:absolute; right:0; top:0; bottom:0;
+background:var(–red); border:none; color:white;
+padding:0 20px; cursor:pointer; font-size:18px;
+transition:.3s;
+}
+.search-btn:hover { background:var(–red-bright); }
+.search-results {
+margin-top:20px; text-align:left;
+}
+.search-result-item {
+background:var(–card); border:1px solid var(–border);
+padding:16px 20px; margin-bottom:8px;
+clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
+cursor:pointer; transition:.3s;
+display:flex; justify-content:space-between; align-items:center;
+}
+.search-result-item:hover { border-color:rgba(204,0,0,.5); transform:translateX(4px); }
+.result-name { color:white; font-size:13px; letter-spacing:1px; }
+.result-tag {
+font-size:11px; color:var(–red); letter-spacing:2px;
+background:rgba(204,0,0,.1); padding:3px 10px;
+}
+.search-empty {
+color:rgba(255,255,255,.2); font-size:13px;
+letter-spacing:2px; padding:20px; text-align:center;
+}
+
+/* ── ROULETTE SECTION ── */
+.roulette-section {
+position:relative; z-index:1;
+padding:80px 60px; max-width:900px; margin:0 auto; text-align:center;
+}
+.roulette-section h2 {
+font-family:‘Black Ops One’,cursive; font-size:36px; margin-bottom:8px;
+}
+.roulette-section h2 span { color:var(–red); }
+.roulette-desc {
+color:rgba(255,255,255,.4); font-size:13px;
+letter-spacing:2px; margin-bottom:40px;
+}
+.slot-machine {
+background:var(–card); border:2px solid rgba(204,0,0,.3);
+padding:40px; margin-bottom:30px; position:relative; overflow:hidden;
+clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);
+}
+.slot-machine::before {
+content:’’; position:absolute; top:0; left:0; right:0; height:2px;
+background:var(–red); box-shadow:0 0 20px var(–red);
+}
+.slot-track {
+height:80px; overflow:hidden; position:relative;
+}
+.slot-items {
+transition:transform .05s linear;
+}
+.slot-item {
+height:80px; display:flex; align-items:center; justify-content:center;
+font-family:‘Black Ops One’,cursive; font-size:22px; letter-spacing:3px;
+}
+.slot-item span { color:var(–red); margin-right:12px; font-size:28px; }
+.slot-result {
+margin-top:20px; padding:20px;
+background:rgba(204,0,0,.05); border:1px solid rgba(204,0,0,.2);
+display:none;
+}
+.slot-result.show { display:block; animation:fadeIn .4s ease; }
+@keyframes fadeIn { from{opacity:0;transform:scale(.95)} to{opacity:1;transform:scale(1)} }
+.result-soft-name {
+font-family:‘Black Ops One’,cursive; font-size:28px;
+color:var(–red); margin-bottom:8px;
+animation:glitch 2s infinite;
+}
+.result-soft-desc { color:rgba(255,255,255,.5); font-size:13px; letter-spacing:1px; line-height:1.8; }
+.result-tg-btn {
+display:inline-block; margin-top:16px;
+background:transparent; border:1px solid rgba(204,0,0,.4);
+color:rgba(255,255,255,.6); padding:8px 20px;
+font-family:‘Share Tech Mono’,monospace; font-size:12px;
+letter-spacing:2px; cursor:pointer; transition:.3s; text-decoration:none;
+}
+.result-tg-btn:hover { border-color:var(–red); color:white; }
+.spin-btn {
+background:var(–red); color:white; border:none;
+padding:16px 50px; font-family:‘Black Ops One’,cursive;
+font-size:16px; letter-spacing:4px; cursor:pointer;
+clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
+transition:all .3s; position:relative; overflow:hidden;
+}
+.spin-btn:hover { background:var(–red-bright); box-shadow:0 0 40px rgba(255,26,26,.5); transform:translateY(-2px); }
+.spin-btn:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+.spin-btn::after {
+content:’’; position:absolute; top:-50%; left:-50%;
+width:200%; height:200%;
+background:linear-gradient(transparent,rgba(255,255,255,.1),transparent);
+transform:rotate(45deg) translateX(-100%);
+transition:transform .6s;
+}
+.spin-btn:hover::after { transform:rotate(45deg) translateX(100%); }
+.spin-counter { font-size:12px; color:rgba(255,255,255,.2); letter-spacing:2px; margin-top:12px; }
+
+/* ── ABOUT ── */
+.about {
+position:relative; z-index:1;
+padding:80px 60px; max-width:1100px; margin:0 auto;
+display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+}
+.about-text h2 { font-family:‘Black Ops One’,cursive; font-size:42px; margin-bottom:8px; }
+.about-text h2 span { color:var(–red); }
+.about-text p { color:rgba(255,255,255,.6); line-height:1.8; font-size:14px; margin-bottom:16px; }
+.placeholder-box {
+background:var(–card); border:1px dashed rgba(204,0,0,.4);
+padding:20px; text-align:center;
+color:rgba(255,255,255,.25); font-size:12px; letter-spacing:2px;
+min-height:80px; display:flex; align-items:center; justify-content:center;
+}
+.lottie-placeholder {
+background:var(–card); border:1px dashed rgba(204,0,0,.3);
+height:300px; display:flex; flex-direction:column;
+align-items:center; justify-content:center; gap:12px;
+color:rgba(255,255,255,.2);
+}
+.lottie-icon { font-size:48px; opacity:.3; }
+
+/* ── FEATURES ── */
+.features { position:relative; z-index:1; padding:60px 60px; max-width:1200px; margin:0 auto; }
+.features-header { text-align:center; margin-bottom:50px; }
+.features-header h2 { font-family:‘Black Ops One’,cursive; font-size:42px; }
+.features-header h2 span { color:var(–red); }
+.cards-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.card {
+background:var(–card); border:1px solid var(–border);
+padding:30px 24px; position:relative; overflow:hidden; transition:all .3s;
+clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
+}
+.card::before {
+content:’’; position:absolute; top:0; left:0; right:0; height:2px;
+background:var(–red); transform:scaleX(0); transition:transform .3s;
+}
+.card:hover { border-color:rgba(204,0,0,.5); transform:translateY(-6px); }
+.card:hover::before { transform:scaleX(1); }
+.card-icon { font-size:32px; margin-bottom:16px; display:block; }
+.card h3 { font-family:‘Black Ops One’,cursive; font-size:16px; color:var(–red); letter-spacing:2px; margin-bottom:10px; }
+.card p { color:rgba(255,255,255,.5); font-size:12px; line-height:1.7; }
+.card .placeholder-text {
+background:rgba(255,255,255,.03); border:1px dashed rgba(255,255,255,.1);
+padding:8px; font-size:11px; color:rgba(255,255,255,.2);
+letter-spacing:1px; margin-top:12px; text-align:center;
+}
+
+/* ── TEAM ── */
+.team { position:relative; z-index:1; padding:80px 60px; max-width:900px; margin:0 auto; text-align:center; }
+.team h2 { font-family:‘Black Ops One’,cursive; font-size:42px; margin-bottom:8px; }
+.team h2 span { color:var(–red); }
+.team-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:50px; }
+.team-card {
+background:var(–card); border:1px solid var(–border);
+padding:36px 20px; position:relative; overflow:hidden;
+clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);
+}
+.team-card::after {
+content:’’; position:absolute; top:0; right:0;
+width:0; height:0;
+border-top:16px solid var(–red);
+border-left:16px solid transparent;
+}
+.team-avatar {
+width:70px; height:70px; border-radius:50%;
+background:rgba(204,0,0,.1); border:2px dashed rgba(204,0,0,.4);
+display:flex; align-items:center; justify-content:center;
+margin:0 auto 16px; font-size:28px; color:rgba(255,255,255,.2);
+}
+.team-name { font-family:‘Black Ops One’,cursive; font-size:15px; color:var(–red); letter-spacing:2px; margin-bottom:6px; }
+.team-role { font-size:11px; color:rgba(255,255,255,.3); letter-spacing:3px; text-transform:uppercase; margin-bottom:16px; }
+.team-placeholder {
+background:rgba(255,255,255,.02); border:1px dashed rgba(255,255,255,.08);
+padding:10px; font-size:11px; color:rgba(255,255,255,.15); letter-spacing:1px;
+}
+
+/* ── CTA ── */
+.cta { position:relative; z-index:1; padding:100px 60px; text-align:center; border-top:1px solid rgba(204,0,0,.15); }
+.cta h2 { font-family:‘Black Ops One’,cursive; font-size:52px; margin-bottom:16px; }
+.cta h2 span { color:var(–red); }
+.cta p { color:rgba(255,255,255,.4); font-size:14px; letter-spacing:3px; margin-bottom:40px; }
+.cta-btns { display:flex; gap:20px; justify-content:center; }
+
+/* ── FOOTER ── */
+footer {
+position:relative; z-index:1; padding:30px 60px;
+border-top:1px solid rgba(204,0,0,.1);
+display:flex; justify-content:space-between; align-items:center;
+}
+footer span { font-size:11px; color:rgba(255,255,255,.2); letter-spacing:2px; }
+.secret-hint-footer {
+font-size:10px; color:rgba(255,255,255,.05);
+letter-spacing:1px; cursor:default;
+}
+
+/* ── SCROLL INDICATOR ── */
+.scroll-indicator {
+position:absolute; bottom:40px; left:50%; transform:translateX(-50%);
+display:flex; flex-direction:column; align-items:center; gap:8px;
+color:rgba(255,255,255,.2); font-size:11px; letter-spacing:3px;
+}
+.scroll-line {
+width:1px; height:50px;
+background:linear-gradient(to bottom,var(–red),transparent);
+animation:scrollAnim 1.5s ease-in-out infinite;
+}
+@keyframes scrollAnim {
+0%{transform:scaleY(0);transform-origin:top}
+50%{transform:scaleY(1);transform-origin:top}
+51%{transform:scaleY(1);transform-origin:bottom}
+100%{transform:scaleY(0);transform-origin:bottom}
+}
+
+/* ── BLOOD ACCENT SVG ── */
+.blood-accent { position:absolute; opacity:.15; pointer-events:none; }
+
+/* ── SECRET KEY HINT ── */
+.konami-hint {
+position:fixed; bottom:20px; left:20px; z-index:200;
+font-size:10px; color:rgba(255,255,255,.06);
+letter-spacing:2px; pointer-events:none;
+}
+
+/* ── TOAST ── */
+.toast {
+position:fixed; bottom:40px; right:40px; z-index:5000;
+background:var(–card); border:1px solid var(–red);
+padding:16px 24px; font-size:12px; letter-spacing:2px;
+color:var(–red); transform:translateY(100px); opacity:0;
+transition:.4s; clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0% 100%);
+}
+.toast.show { transform:translateY(0); opacity:1; }
+
+/* ── MOCKUP BADGE ── */
+.mockup-label {
+position:fixed; top:12px; right:12px;
+background:var(–red); color:white;
+font-size:11px; padding:4px 10px; z-index:999;
+letter-spacing:2px; border:1px solid #ff4444;
+}
 </style>
-```
 
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo">🤝 UA-USA Bridge</div>
-            <div class="nav-dots">
-                <div class="dot active" onclick="goToPage(0)"></div>
-                <div class="dot" onclick="goToPage(1)"></div>
-            </div>
-        </div>
-    </header>
 
-```
-<div class="container">
-    <!-- PAGE 1: AGREEMENT -->
-    <div class="page page-1 active">
-        <div class="title">
-            <div class="subtitle">Partnership Agreement</div>
-            <h1>UA-USA Strategic Bridge 2026</h1>
-            <p style="color: #64748b; font-size: 14px; margin-top: 10px;">Operational Framework & Strategic Partnership Proposal</p>
-        </div>
+<canvas id="particles"></canvas>
 
-        <div class="divider"></div>
+<div class="grid-bg"></div>
+<div class="mockup-label">[ MOCKUP v2.0 ]</div>
+<div class="konami-hint">psst... try clicking the bear 5 times 🐻</div>
+<div class="toast" id="toast"></div>
 
-        <div class="section">
-            <div class="section-title">Executive Summary</div>
-            <div class="section-content">
-                <p>Дана пропозиція описує створення транскордонної бізнес-моделі, що базується на ринковому арбітражі (Market Arbitrage) між Україною та США. Синергія проекту полягає у поєднанні інтелектуального ресурсу та низьких операційних витрат України (Low Opex/High IQ) з високою ліквідністю та купівельною спроможністю ринку США.</p>
-                <p><strong>Мета 2026 року:</strong> побудова стійкої інфраструктури для генерації валютного прибутку та масштабування цифрових та фізичних активів.</p>
-            </div>
-        </div>
+<!-- ══ SECRET PAGE OVERLAY ══ -->
 
-        <div class="section">
-            <div class="section-title">Organizational Structure (Governance)</div>
-            <div class="section-content">
-                <p><strong>Managing Partner / CEO (UA) — Артём (Artemkaplagg)</strong></p>
-                <div class="highlight">
-                    <p>• Стратегічне планування та R&D</p>
-                    <p>• Технічна інфраструктура (AI-автоматизація, веб-платформи)</p>
-                    <p>• Operational Control: управління процесами в Україні</p>
-                    <p>• Маркетингова стратегія та аналіз ніш</p>
-                </div>
-
-                <p><strong>Managing Partner / CEO (USA) — Тимур</strong></p>
-                <div class="highlight">
-                    <p>• Market Relations: представництво інтересів на ринку США</p>
-                    <p>• Supply Chain Management: фізичний контроль товарів та логістичних вузлів у США</p>
-                    <p>• Financial Gateway: управління фінансовими потоками всередину штатів</p>
-                    <p>• Quality Assurance: контроль якості продуктів/послуг перед відправкою/реалізацією</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Financial & Legal Framework</div>
-            <div class="section-content">
-                <p><strong>Equity Split:</strong> Розподіл чистого прибутку (Net Profit) здійснюється у пропорції <strong>50/50</strong> після вирахування всіх операційних витрат (податки, логістика, маркетинг).</p>
-                <p><strong>Reporting:</strong> Впроваджується щомісячний фінансовий аудит (P&L statement). Всі транзакції фіксуються в єдиній хмарній системі обліку для повної прозорості.</p>
-                <p><strong>Commitment:</strong> Обов'язкова синхронізація (Daily Stand-up) раз на 48 годин. Невиконання встановлених KPI є приводом для перегляду умов партнерства.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Strategic Business Units (SBU)</div>
-            <div class="section-content">
-                <p><strong>Unit 1: Premium Resell & Arbitrage</strong><br>
-                Логістичний міст: викуп високоліквідних активів на закритих аукціонах та стокових майданчиках США. Дистрибуція в преміум-сегменті ринку України з маржинальністю від 30% до 100%.</p>
-
-                <p><strong>Unit 2: Global AI Service Provider</strong><br>
-                Аутсорс-агентство нового покоління. Розробка та впровадження AI-рішень (чат-боти, автоматизація, контент) для малого та середнього бізнесу в США. Виконання робіт українським офісом забезпечує високу рентабельність.</p>
-
-                <p><strong>Unit 3: Global E-commerce Expansion</strong><br>
-                Запуск та управління торговими точками на платформах Shopify/Amazon. Використання локальної присутності в США для швидкого повернення товарів та роботи з клієнтами.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Roadmap Q1-Q2 2026</div>
-            <div class="section-content">
-                <p><strong>Лютий:</strong> Market Intelligence. Аналіз 10+ ніш, setup платіжних систем та технічної інфраструктури.</p>
-                <p><strong>Березень:</strong> MVP Launch. Запуск першого пілотного проекту. Отримання першого прибутку (First Revenue).</p>
-                <p><strong>Квітень:</strong> ROI Analysis. Оцінка ефективності, аудит помилок та початок масштабування (Scalability Phase).</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <div class="section-title">Conclusion</div>
-            <div class="section-content">
-                <p>Даний документ є фундаментом для довгострокової капіталізації. Ми не шукаємо "швидких грошей", ми будуємо систему, що працює на різниці економічних циклів двох країн. <strong>Дисципліна — це єдиний шлях до масштабування.</strong></p>
-            </div>
-        </div>
-
-        <div class="button-group">
-            <button class="btn btn-secondary" onclick="goToPage(1)">Перейти до підпису →</button>
-        </div>
-    </div>
-
-    <!-- PAGE 2: SIGNATURE -->
-    <div class="page page-2">
-        <div class="title">
-            <div class="subtitle">Signature & Acceptance</div>
-            <h1>Partnership Agreement</h1>
-            <p style="color: #64748b; font-size: 14px; margin-top: 10px;">Обидві сторони згодні з умовами партнерства та приймають цей договір</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="agreement-terms">
-            <h4>📋 Умови Прийняття</h4>
-            <p>Обидва партнери підтверджують, що прочитали весь договір, розуміють його умови та добровільно погоджуються з усіма пунктами, викладеними вище. Цей договір набуває чинності з дати останньої підписи.</p>
-        </div>
-
-        <div class="signature-info">
-            <div class="signer-card">
-                <h3>Артём</h3>
-                <p class="signer-role">CEO Ukraine | Market Strategy & Operations</p>
-                <button class="sign-btn" id="signBtn1" onclick="openSignatureModal(0)">
-                    ✏️ Підписати
-                </button>
-                <div class="signature-status-badge" id="badge1">✅ Підписано</div>
-            </div>
-
-            <div class="signer-card">
-                <h3>Тимур</h3>
-                <p class="signer-role">CEO USA | Market Relations & Supply Chain</p>
-                <button class="sign-btn" id="signBtn2" onclick="openSignatureModal(1)">
-                    ✏️ Підписати
-                </button>
-                <div class="signature-status-badge" id="badge2">✅ Підписано</div>
-            </div>
-        </div>
-
-        <div class="checkbox-group">
-            <input type="checkbox" id="agree" class="checkbox">
-            <label for="agree" class="checkbox-label">✓ Я прочитав весь документ і погоджуюся з усіма умовами партнерства</label>
-        </div>
-
-        <div class="contact-section">
-            <p>📞 Питання щодо договору?</p>
-            <a href="https://t.me/artemkaplagg" target="_blank" class="contact-link">Зв'яжіться в Telegram → @artemkaplagg</a>
-        </div>
-
-        <div class="success-message" id="successMsg">
-            <strong>✅ Договір підписаний успішно!</strong><br>
-            <p style="margin-top: 8px;">Усі детали було записано. До скорої зустрічи! 🚀</p>
-        </div>
-
-        <div class="button-group">
-            <button class="btn btn-secondary" onclick="goToPage(0)">← Повернутися до договору</button>
-            <button class="btn btn-primary btn-disabled" id="submitBtn" onclick="submitAgreement()" disabled>
-                ПРИЙНЯТИ ДОГОВІР ✓
-            </button>
-        </div>
-    </div>
+<div id="secret-overlay">
+  <span class="secret-close" onclick="closeSecret()">✕</span>
+  <div class="secret-title">// ДОСТУП ПОЛУЧЕН //</div>
+  <div class="secret-text">
+    ты нашёл скрытую страницу<br>
+    добро пожаловать в зону 0x00
+  </div>
+  <div class="secret-code-display" id="secret-code"></div>
+  <a href="#" class="btn-primary">→ ВОЙТИ В КАНАЛ</a>
 </div>
 
-<!-- MODAL FOR SIGNATURE -->
-<div class="modal" id="signatureModal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2 id="modalTitle">Підпиши Договір</h2>
-            <p>Натисніть та малюйте вашу підпис</p>
-        </div>
+<!-- ══ NAV ══ -->
 
-        <div class="modal-hint">
-            💡 Рисуйте своєю мишею або пальцем на екрані нижче
-        </div>
+<nav>
+  <div class="nav-logo" id="nav-logo">s<span class="zero">0</span>ft</div>
+  <ul class="nav-links">
+    <li><a href="#about">О нас</a></li>
+    <li><a href="#search">Поиск</a></li>
+    <li><a href="#roulette">Рулетка</a></li>
+    <li><a href="#team">Команда</a></li>
+    <li><a href="#" style="color:var(--red)" onclick="openSecret(event)">// secret</a></li>
+  </ul>
+</nav>
 
-        <div class="modal-canvas-wrapper">
-            <canvas id="modalCanvas"></canvas>
-        </div>
+<!-- ══ HERO ══ -->
 
-        <div class="modal-buttons">
-            <button class="modal-btn modal-btn-clear" onclick="clearModalSignature()">
-                🗑️ Очистити
-            </button>
-            <button class="modal-btn modal-btn-confirm" onclick="confirmSignature()" id="confirmBtn" disabled>
-                ✓ Підтвердити
-            </button>
-        </div>
+<section class="hero">
+  <svg class="blood-accent" style="top:10%;right:5%;width:200px" viewBox="0 0 200 200" fill="none">
+    <circle cx="20" cy="30" r="8" fill="#CC0000"/>
+    <circle cx="60" cy="10" r="5" fill="#CC0000"/>
+    <circle cx="100" cy="40" r="10" fill="#CC0000"/>
+    <circle cx="150" cy="20" r="6" fill="#CC0000"/>
+    <ellipse cx="80" cy="80" rx="15" ry="8" fill="#CC0000"/>
+    <path d="M20 30 Q40 5 60 10" stroke="#CC0000" stroke-width="2" fill="none"/>
+    <path d="M100 40 Q130 15 150 20" stroke="#CC0000" stroke-width="2" fill="none"/>
+  </svg>
+  <svg class="blood-accent" style="bottom:15%;left:3%;width:150px" viewBox="0 0 200 200" fill="none">
+    <circle cx="40" cy="100" r="12" fill="#CC0000"/>
+    <circle cx="90" cy="70" r="7" fill="#CC0000"/>
+    <circle cx="130" cy="120" r="9" fill="#CC0000"/>
+    <ellipse cx="60" cy="140" rx="18" ry="10" fill="#CC0000"/>
+    <path d="M40 100 Q65 60 90 70" stroke="#CC0000" stroke-width="2.5" fill="none"/>
+  </svg>
+
+  <div style="position:relative">
+    <img src="/mnt/user-data/uploads/IMG_1614.jpeg" class="hero-logo" id="bear" alt="s0ftология">
+  </div>
+
+  <div class="hero-subtitle">[ добро пожаловать в ]</div>
+  <h1 class="hero-title">s<span>0</span>ftология</h1>
+  <div class="typewriter" id="typewriter"></div>
+
+  <div class="hero-btns">
+    <a href="#" class="btn-primary">📢 Telegram канал</a>
+    <a href="#" class="btn-secondary">💬 Наш чат</a>
+  </div>
+
+  <div style="font-size:11px;color:rgba(255,255,255,.15);letter-spacing:2px;margin-top:10px">
+    [ нажми на медведя ]
+  </div>
+
+  <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ SEARCH ══ -->
+
+<section class="search-section fade-in" id="search">
+  <h2>Найди <span>свой софт</span></h2>
+  <div class="section-line" style="margin:16px auto"></div>
+  <p style="color:rgba(255,255,255,.3);font-size:13px;letter-spacing:2px;margin-bottom:30px">поиск по базе канала s0ftологии</p>
+  <div class="search-wrap">
+    <input class="search-input" id="searchInput" type="text" placeholder="введи название... например: vpn, parser, checker">
+    <button class="search-btn" onclick="doSearch()">🔍</button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ ROULETTE ══ -->
+
+<section class="roulette-section fade-in" id="roulette">
+  <h2>Рулетка <span>софта</span></h2>
+  <div class="section-line" style="margin:16px auto"></div>
+  <p class="roulette-desc">не знаешь что взять? пусть судьба решит 🎰</p>
+
+  <div class="slot-machine">
+    <div class="slot-track">
+      <div class="slot-items" id="slotItems">
+        <div class="slot-item"><span>💻</span> НАЖМИ КРУТИТЬ</div>
+      </div>
     </div>
-</div>
+    <div class="slot-result" id="slotResult">
+      <div class="result-soft-name" id="resultName"></div>
+      <div class="result-soft-desc" id="resultDesc"></div>
+      <a href="#" class="result-tg-btn">→ найти в канале</a>
+    </div>
+  </div>
+
+<button class="spin-btn" id="spinBtn" onclick="spinRoulette()">🎰 КРУТИТЬ</button>
+
+  <div class="spin-counter" id="spinCounter">крутили уже: <span id="spinCount">0</span> раз</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ ABOUT ══ -->
+
+<section class="about fade-in" id="about">
+  <div class="about-text">
+    <h2>О <span>нас</span></h2>
+    <div class="section-line"></div>
+    <p>Мы — отдельная ветка от 0DAY. Здесь только то, за что нас полюбили: софты, мануалы, базы и всё около этой тематики.</p>
+    <p>Без лишней мишуры. По делу.</p>
+    <div class="placeholder-box">[ МЕСТО ДЛЯ ТЕКСТА — КОПИРАЙТЕР ]</div>
+  </div>
+  <div class="lottie-placeholder">
+    <div class="lottie-icon">👻</div>
+    <span style="font-size:12px;letter-spacing:2px">[ LOTTIE GHOST ANIMATION ]</span>
+    <span style="font-size:10px;opacity:.5">halloween-ghost-EWy8w4Rrfy</span>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ FEATURES ══ -->
+
+<section class="features fade-in">
+  <div class="features-header">
+    <h2>Что найдёшь <span>внутри</span></h2>
+    <div class="section-line" style="margin:16px auto 0"></div>
+  </div>
+  <div class="cards-grid">
+    <div class="card">
+      <span class="card-icon">💻</span>
+      <h3>s0fты</h3>
+      <p>Рабочие инструменты и программы</p>
+      <div class="placeholder-text">[ ТЕКСТ КОПИРАЙТЕРА ]</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">📖</span>
+      <h3>Мануалы</h3>
+      <p>Подробные инструкции и гайды</p>
+      <div class="placeholder-text">[ ТЕКСТ КОПИРАЙТЕРА ]</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🗄️</span>
+      <h3>Базы</h3>
+      <p>Актуальные базы данных</p>
+      <div class="placeholder-text">[ ТЕКСТ КОПИРАЙТЕРА ]</div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🔍</span>
+      <h3>Пробив</h3>
+      <p>Инструменты для проверки</p>
+      <div class="placeholder-text">[ ТЕКСТ КОПИРАЙТЕРА ]</div>
+    </div>
+  </div>
+  <div style="margin-top:50px">
+    <div class="lottie-placeholder">
+      <div class="lottie-icon">🖥️</div>
+      <span style="font-size:12px;letter-spacing:2px">[ LOTTIE ISOMETRIC UI ANIMATION ]</span>
+      <span style="font-size:10px;opacity:.5">isometric-animation-for-uiux-design-landing-page-gWtPfeayAK</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ TEAM ══ -->
+
+<section class="team fade-in" id="team">
+  <h2>Наша <span>команда</span></h2>
+  <div class="section-line" style="margin:16px auto 0"></div>
+  <div class="team-grid">
+    <div class="team-card">
+      <div class="team-avatar">?</div>
+      <div class="team-name">[ ИМЯ 1 ]</div>
+      <div class="team-role">Капитан · Копирайтер</div>
+      <div class="team-placeholder">[ ТЕКСТ ОБ УЧАСТНИКЕ ]</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">?</div>
+      <div class="team-name">[ ИМЯ 2 ]</div>
+      <div class="team-role">Дизайнер</div>
+      <div class="team-placeholder">[ ТЕКСТ ОБ УЧАСТНИКЕ ]</div>
+    </div>
+    <div class="team-card">
+      <div class="team-avatar">?</div>
+      <div class="team-name">[ ИМЯ 3 ]</div>
+      <div class="team-role">Кодер</div>
+      <div class="team-placeholder">[ ТЕКСТ ОБ УЧАСТНИКЕ ]</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══ CTA ══ -->
+
+<section class="cta fade-in">
+  <h2>Присоединяйся к <span>s0ftологии</span></h2>
+  <p>[ СЛОГАН — КОПИРАЙТЕР ]</p>
+  <div class="cta-btns">
+    <a href="#" class="btn-primary">📢 Telegram канал</a>
+    <a href="#" class="btn-secondary">💬 Наш чат</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 s0ftология</span>
+  <span class="secret-hint-footer">↑ ↑ ↓ ↓ ← → ← → B A</span>
+  <span>by 0DAY ✦</span>
+</footer>
 
 <script>
-    const modal = document.getElementById('signatureModal');
-    const modalCanvas = document.getElementById('modalCanvas');
-    const ctx = modalCanvas.getContext('2d');
-    const modalTitle = document.getElementById('modalTitle');
-    const confirmBtn = document.getElementById('confirmBtn');
-    
-    let currentSigner = -1;
-    let isDrawing = false;
-    let hasDrawn = false;
-    const signed = [false, false];
-    const signedNames = ['Артём', 'Тимур'];
+// ═══ PARTICLES ═══
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth; canvas.height = window.innerHeight;
+const particles = [];
+for (let i = 0; i < 90; i++) particles.push({
+  x: Math.random()*canvas.width, y: Math.random()*canvas.height,
+  r: Math.random()*2+.5, dx:(Math.random()-.5)*.4, dy:(Math.random()-.5)*.4,
+  alpha:Math.random()*.6+.1, red:Math.random()>.7
+});
+function animP() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  particles.forEach(p => {
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle = p.red ? `rgba(204,0,0,${p.alpha})` : `rgba(255,255,255,${p.alpha*.3})`;
+    ctx.fill();
+    p.x+=p.dx; p.y+=p.dy;
+    if(p.x<0||p.x>canvas.width) p.dx*=-1;
+    if(p.y<0||p.y>canvas.height) p.dy*=-1;
+  });
+  requestAnimationFrame(animP);
+}
+animP();
+window.addEventListener('resize',()=>{canvas.width=window.innerWidth;canvas.height=window.innerHeight;});
 
-    function setupCanvasSize() {
-        const rect = modalCanvas.parentElement.getBoundingClientRect();
-        modalCanvas.width = rect.width - 40;
-        modalCanvas.height = 250;
-        ctx.strokeStyle = '#0f172a';
-        ctx.lineWidth = 2.5;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
+// ═══ TYPEWRITER ═══
+const phrases = ['s0fты. мануалы. базы.','без лишней мишуры.','по делу.','0DAY — это мы.'];
+let pi=0,ci=0,del=false;
+const tw = document.getElementById('typewriter');
+function type(){
+  const ph=phrases[pi];
+  if(!del){tw.textContent=ph.slice(0,++ci);if(ci===ph.length){del=true;setTimeout(type,1800);return;}}
+  else{tw.textContent=ph.slice(0,--ci);if(ci===0){del=false;pi=(pi+1)%phrases.length;}}
+  setTimeout(type,del?50:90);
+}
+type();
+
+// ═══ FADE IN ═══
+const obs = new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');})},{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+// ═══ TOAST ═══
+function showToast(msg, duration=2500){
+  const t=document.getElementById('toast');
+  t.textContent=msg; t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'),duration);
+}
+
+// ═══ INTERACTIVE BEAR 🐻 ═══
+let bearClicks = 0;
+let rageTimer = null;
+const bearMsgs = ['...','сиди тихо','не трогай','я предупреждал','ПОСЛЕДНИЙ РАЗ'];
+const bear = document.getElementById('bear');
+
+bear.addEventListener('click', function(e){
+  bearClicks++;
+  // Splat blood
+  const splat = document.createElementNS('http://www.w3.org/2000/svg','svg');
+  splat.setAttribute('viewBox','0 0 60 60');
+  splat.setAttribute('width','60'); splat.setAttribute('height','60');
+  splat.style.cssText=`position:fixed;left:${e.clientX-30}px;top:${e.clientY-30}px;pointer-events:none;z-index:9997`;
+  splat.classList.add('blood-splat');
+  splat.innerHTML=`<circle cx="30" cy="30" r="${8+Math.random()*10}" fill="#CC0000" opacity="0.8"/>
+    <circle cx="${20+Math.random()*20}" cy="${15+Math.random()*10}" r="${3+Math.random()*5}" fill="#990000"/>
+    <circle cx="${10+Math.random()*10}" cy="${35+Math.random()*15}" r="${2+Math.random()*4}" fill="#CC0000"/>`;
+  document.body.appendChild(splat);
+  setTimeout(()=>splat.remove(), 1000);
+
+  // Message
+  const msg = document.createElement('div');
+  msg.className='bear-reaction';
+  msg.textContent = bearMsgs[Math.min(bearClicks-1, bearMsgs.length-1)];
+  msg.style.cssText=`position:fixed;left:${e.clientX-40}px;top:${e.clientY-50}px`;
+  document.body.appendChild(msg);
+  setTimeout(()=>msg.remove(), 600);
+
+  // Rage mode
+  if(bearClicks >= 3){
+    bear.classList.add('rage');
+    clearTimeout(rageTimer);
+    rageTimer = setTimeout(()=>{bear.classList.remove('rage'); bearClicks=0;}, 1500);
+  }
+
+  // Secret unlock at 5 clicks
+  if(bearClicks === 5){
+    setTimeout(()=>openSecret(null), 800);
+  }
+});
+
+// ═══ SECRET PAGE ═══
+function openSecret(e){
+  if(e) e.preventDefault();
+  const lines = [
+    '> initializing secure connection...',
+    '> bypassing firewall... [OK]',
+    '> decrypting access token... [OK]',
+    '> loading hidden content... [OK]',
+    '> welcome to zone 0x00',
+    '',
+    '> this page exists only for those',
+    '> who know where to look.',
+    '',
+    '> s0ftология :: root access granted',
+  ];
+  const el = document.getElementById('secret-code');
+  el.textContent='';
+  document.getElementById('secret-overlay').classList.add('active');
+  let i=0;
+  const interval = setInterval(()=>{
+    if(i<lines.length){el.textContent+=lines[i]+'\n'; i++;}
+    else clearInterval(interval);
+  }, 120);
+}
+function closeSecret(){
+  document.getElementById('secret-overlay').classList.remove('active');
+}
+// Konami code easter egg
+const konami = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];
+let ki=0;
+document.addEventListener('keydown',e=>{
+  if(e.key===konami[ki]){ki++;if(ki===konami.length){openSecret(null);ki=0;}}
+  else ki=0;
+});
+
+// ═══ SEARCH ═══
+const softDB = [
+  {name:'Telegram Parser v2.3', tag:'ПАРСЕР', desc:'Парсинг участников групп'},
+  {name:'Account Checker Pro', tag:'ЧЕКЕР', desc:'Проверка аккаунтов'},
+  {name:'VPN Bypass Tool', tag:'VPN', desc:'Обход блокировок'},
+  {name:'Data Scraper X', tag:'СКРАПЕР', desc:'Сбор данных с сайтов'},
+  {name:'Proxy Grabber', tag:'ПРОКСИ', desc:'Сбор прокси серверов'},
+  {name:'Mail Bomber', tag:'СПАМ', desc:'Рассылка сообщений'},
+  {name:'Hash Cracker 3.0', tag:'КРИПТО', desc:'Расшифровка хешей'},
+  {name:'IP Scanner Ultra', tag:'СЕТЬ', desc:'Сканирование сети'},
+  {name:'Brute Force Kit', tag:'БРУТ', desc:'Подбор паролей'},
+  {name:'OSINT Framework', tag:'ОСИНТ', desc:'Разведка по открытым данным'},
+  {name:'Phone Lookup DB', tag:'ПРОБИВ', desc:'Поиск по номеру телефона'},
+  {name:'Social Media Dumper', tag:'ДАМПЕР', desc:'Дамп соцсетей'},
+];
+
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('keyup', e=>{ if(e.key==='Enter') doSearch(); });
+
+function doSearch(){
+  const q = searchInput.value.toLowerCase().trim();
+  const res = document.getElementById('searchResults');
+  if(!q){ res.innerHTML=''; return; }
+  const found = softDB.filter(s=>s.name.toLowerCase().includes(q)||s.tag.toLowerCase().includes(q)||s.desc.toLowerCase().includes(q));
+  if(found.length===0){
+    res.innerHTML=`<div class="search-empty">[ ничего не найдено по запросу "${q}" — загляни в канал ]</div>`;
+    return;
+  }
+  res.innerHTML = found.map(s=>`
+    <div class="search-result-item" onclick="showToast('→ ищи в Telegram канале: ${s.name}')">
+      <span class="result-name">${s.name} <span style="color:rgba(255,255,255,.3);font-size:11px">— ${s.desc}</span></span>
+      <span class="result-tag">${s.tag}</span>
+    </div>
+  `).join('');
+}
+
+// ═══ ROULETTE ═══
+const softs = [
+  {icon:'💻', name:'Account Checker Pro', desc:'Проверка акков по базе. Работает стабильно, обновляется регулярно.'},
+  {icon:'🔍', name:'Telegram Parser v2.3', desc:'Парсит участников каналов и групп. Выгружает в CSV.'},
+  {icon:'🌐', name:'VPN Bypass Pro', desc:'Обходит блокировки. Работает без регистрации.'},
+  {icon:'🗄️', name:'Data Scraper X', desc:'Собирает данные с сайтов. Поддерживает 40+ платформ.'},
+  {icon:'📡', name:'Proxy Grabber Ultra', desc:'Находит рабочие прокси за секунды.'},
+  {icon:'🔐', name:'Hash Cracker 3.0', desc:'Расшифровывает MD5, SHA1, SHA256 и другие хеши.'},
+  {icon:'📱', name:'Phone Lookup DB', desc:'Пробив по номеру. База обновлена в 2024.'},
+  {icon:'🕵️', name:'OSINT Framework', desc:'Полный инструментарий для разведки по открытым данным.'},
+  {icon:'💣', name:'Brute Force Kit', desc:'Подбор паролей. Многопоточный. Быстрый.'},
+  {icon:'📧', name:'Mail Bomber v4', desc:'Массовая рассылка. Обходит спам-фильтры.'},
+];
+
+let spinning = false;
+let totalSpins = 0;
+
+function spinRoulette(){
+  if(spinning) return;
+  spinning = true;
+  const btn = document.getElementById('spinBtn');
+  btn.disabled = true;
+  btn.textContent = '⟳ КРУТИМ...';
+  document.getElementById('slotResult').classList.remove('show');
+
+  const track = document.getElementById('slotItems');
+  const chosen = softs[Math.floor(Math.random()*softs.length)];
+
+  // Build scroll items
+  let items = '';
+  for(let i=0;i<30;i++){
+    const s = softs[i % softs.length];
+    items += `<div class="slot-item"><span>${s.icon}</span>${s.name}</div>`;
+  }
+  items += `<div class="slot-item"><span>${chosen.icon}</span>${chosen.name}</div>`;
+  track.innerHTML = items;
+
+  let pos = 0;
+  const total = 31;
+  let speed = 30;
+  let current = 0;
+
+  function scroll(){
+    if(current >= total - 1){
+      // Land on chosen
+      track.style.transform = `translateY(-${(total-1)*80}px)`;
+      setTimeout(()=>{
+        document.getElementById('resultName').textContent = chosen.icon + ' ' + chosen.name;
+        document.getElementById('resultDesc').textContent = chosen.desc;
+        document.getElementById('slotResult').classList.add('show');
+        spinning = false;
+        btn.disabled = false;
+        btn.textContent = '🎰 КРУТИТЬ ЕЩЁ';
+        totalSpins++;
+        document.getElementById('spinCount').textContent = totalSpins;
+        showToast(`выпало: ${chosen.name} 🎰`);
+      }, 300);
+      return;
     }
+    current++;
+    track.style.transform = `translateY(-${current*80}px)`;
+    // Decelerate
+    if(current > total * .6) speed = Math.min(speed + 8, 180);
+    setTimeout(scroll, speed);
+  }
+  setTimeout(scroll, 50);
+}
 
-    setupCanvasSize();
-    window.addEventListener('resize', setupCanvasSize);
-
-    function openSignatureModal(index) {
-        currentSigner = index;
-        hasDrawn = false;
-        confirmBtn.disabled = true;
-        clearModalSignature();
-        
-        modalTitle.textContent = `Підпиши Договір — ${signedNames[index]}`;
-        modal.classList.add('show');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal() {
-        modal.classList.remove('show');
-        document.body.style.overflow = 'auto';
-        currentSigner = -1;
-    }
-
-    // Canvas drawing
-    modalCanvas.addEventListener('mousedown', startDrawing);
-    modalCanvas.addEventListener('mousemove', draw);
-    modalCanvas.addEventListener('mouseup', stopDrawing);
-    modalCanvas.addEventListener('mouseout', stopDrawing);
-
-    // Touch support
-    modalCanvas.addEventListener('touchstart', startDrawing);
-    modalCanvas.addEventListener('touchmove', draw);
-    modalCanvas.addEventListener('touchend', stopDrawing);
-
-    function startDrawing(e) {
-        isDrawing = true;
-        hasDrawn = true;
-        confirmBtn.disabled = false;
-        
-        const rect = modalCanvas.getBoundingClientRect();
-        const x = (e.clientX || e.touches?.[0]?.clientX) - rect.left;
-        const y = (e.clientY || e.touches?.[0]?.clientY) - rect.top;
-        
-        ctx.beginPath();
-        ctx.moveTo(x, y);
-    }
-
-    function draw(e) {
-        if (!isDrawing) return;
-        
-        const rect = modalCanvas.getBoundingClientRect();
-        const x = (e.clientX || e.touches?.[0]?.clientX) - rect.left;
-        const y = (e.clientY || e.touches?.[0]?.clientY) - rect.top;
-        
-        ctx.lineTo(x, y);
-        ctx.stroke();
-    }
-
-    function stopDrawing() {
-        isDrawing = false;
-    }
-
-    function clearModalSignature() {
-        ctx.clearRect(0, 0, modalCanvas.width, modalCanvas.height);
-        hasDrawn = false;
-        confirmBtn.disabled = true;
-    }
-
-    function confirmSignature() {
-        if (!hasDrawn || currentSigner < 0) return;
-
-        signed[currentSigner] = true;
-        
-        // Обновляем UI
-        const btn = document.getElementById(`signBtn${currentSigner + 1}`);
-        const badge = document.getElementById(`badge${currentSigner + 1}`);
-        
-        btn.classList.add('signed');
-        btn.textContent = '✅ Підписано';
-        btn.disabled = true;
-        
-        badge.classList.add('show');
-
-        closeModal();
-        checkCompletion();
-    }
-
-    document.getElementById('agree').addEventListener('change', checkCompletion);
-
-    function checkCompletion() {
-        const agree = document.getElementById('agree').checked;
-        const bothSigned = signed[0] && signed[1];
-        const submitBtn = document.getElementById('submitBtn');
-
-        if (bothSigned && agree) {
-            submitBtn.classList.remove('btn-disabled');
-            submitBtn.disabled = false;
-        } else {
-            submitBtn.classList.add('btn-disabled');
-            submitBtn.disabled = true;
-        }
-    }
-
-    function submitAgreement() {
-        if (!signed[0] || !signed[1] || !document.getElementById('agree').checked) {
-            alert('Будь ласка, заповніть усі поля!');
-            return;
-        }
-
-        const successMsg = document.getElementById('successMsg');
-        successMsg.classList.add('show');
-
-        setTimeout(() => {
-            const today = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            const dateStr = today.toLocaleDateString('uk-UA', options);
-            alert('🎉 Договір прийнято успішно!\n\nКонтакт: @artemkaplagg\nДата: ' + dateStr);
-        }, 500);
-    }
-
-    function goToPage(pageNum) {
-        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-        document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
-
-        document.querySelectorAll('.page')[pageNum].classList.add('active');
-        document.querySelectorAll('.dot')[pageNum].classList.add('active');
-
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-
-    // Закрытие модала по клику на фон
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
-    });
 </script>
-```
 
 </body>
 </html>
